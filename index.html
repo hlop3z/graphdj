@@ -328,13 +328,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#skeleton" class="md-nav__link">
-    Skeleton
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#setup-see-configs-for-example" class="md-nav__link">
     Setup/ — See Configs for example.
   </a>
@@ -571,13 +564,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#skeleton" class="md-nav__link">
-    Skeleton
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#setup-see-configs-for-example" class="md-nav__link">
     Setup/ — See Configs for example.
   </a>
@@ -651,42 +637,6 @@
 <blockquote>
 <p>To simplify building the <strong>C.R.U.D</strong> system &amp; automate the <strong>Documentation</strong> of the <strong>API</strong>.</p>
 </blockquote>
-<h2 id="skeleton"><strong>Skeleton</strong></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>[project_name]/                     --&gt;  Project Root.
-<span class="linenos" data-linenos=" 2 "></span>├── data/                           --&gt;  Any &lt;data&gt; for the project.
-<span class="linenos" data-linenos=" 3 "></span>├── docs/                           --&gt;  Write the &lt;documentation&gt; here.
-<span class="linenos" data-linenos=" 4 "></span>├── scripts/                        --&gt;  Write the &lt;shell/bash&gt; here.
-<span class="linenos" data-linenos=" 5 "></span>├── [project_name]/                 --&gt;  Write the &lt;code&gt; here. (Django Root)
-<span class="linenos" data-linenos=" 6 "></span>│   ├── __init__.py
-<span class="linenos" data-linenos=" 7 "></span>│   ├── apps/
-<span class="linenos" data-linenos=" 8 "></span>│   ├── configs/
-<span class="linenos" data-linenos=" 9 "></span>│   ├── core/
-<span class="linenos" data-linenos="10 "></span>│   ├── scripts/
-<span class="linenos" data-linenos="11 "></span>│   │
-<span class="linenos" data-linenos="12 "></span>│   ├── [project_name]/
-<span class="linenos" data-linenos="13 "></span>│   │   ├── settings/               --&gt;  (Django Settings)
-<span class="linenos" data-linenos="14 "></span>│   │   │   ├── __init__.py
-<span class="linenos" data-linenos="15 "></span>│   │   │   ├── base.py             --&gt;  (Django Defaults)
-<span class="linenos" data-linenos="16 "></span>│   │   │   ├── common.py
-<span class="linenos" data-linenos="17 "></span>│   │   │   ├── development.py
-<span class="linenos" data-linenos="18 "></span>│   │   │   ├── i18n.py
-<span class="linenos" data-linenos="19 "></span>│   │   │   ├── production.py
-<span class="linenos" data-linenos="20 "></span>│   │   │   └── test.py
-<span class="linenos" data-linenos="21 "></span>│   │   ├── urls.py
-<span class="linenos" data-linenos="22 "></span>│   │   └── wsgi.py
-<span class="linenos" data-linenos="23 "></span>│   │
-<span class="linenos" data-linenos="24 "></span>│   ├── setup/                      --&gt;  App Setup — [Roles]
-<span class="linenos" data-linenos="25 "></span>│   │   ├── roles/
-<span class="linenos" data-linenos="26 "></span>│   │   │   └── visitor.yaml
-<span class="linenos" data-linenos="27 "></span>│   │   ├── __init__.py
-<span class="linenos" data-linenos="28 "></span>│   │   └── plurals.py
-<span class="linenos" data-linenos="29 "></span>│   │
-<span class="linenos" data-linenos="30 "></span>│   ├── utils/
-<span class="linenos" data-linenos="31 "></span>│   └── manage.py
-<span class="linenos" data-linenos="32 "></span>├── run_server.sh
-<span class="linenos" data-linenos="33 "></span>└── watcher.py                      --&gt;  Code style enforcer &amp; rating.
-</code></pre></div>
-<p><br/><br/></p>
 <h2 id="setup-see-configs-for-example"><strong>Setup/</strong> — See <a href="/tutorial/configs/">Configs</a> for example.</h2>
 <ul>
 <li>roles/ <blockquote>
