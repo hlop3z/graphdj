@@ -11,8 +11,5 @@ __pycache__/
 # for pytest
 .cache
 
-# docs
-docs/site/
-
 # vscode
 .vscode/
