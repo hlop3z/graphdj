@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-file-named-startprojectsh" class="md-skip">
+        <a href="#do-install" class="md-skip">
           Skip to content
         </a>
       
@@ -333,66 +333,12 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Install
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="install.html" class="md-nav__link md-nav__link--active">
         Install
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-file-named-startprojectsh" class="md-nav__link">
-    Create a file named startproject.sh
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#copy-paste-the-content-in-startprojectsh-to-the-file" class="md-nav__link">
-    Copy &amp; Paste the content in startproject.sh to the file.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-to-your-project-folder" class="md-nav__link">
-    Go to your Project Folder
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-to-your-virtual-environment" class="md-nav__link">
-    Go to your Virtual-Environment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-to-your-django-project" class="md-nav__link">
-    Go to your Django Project
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -522,49 +468,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-file-named-startprojectsh" class="md-nav__link">
-    Create a file named startproject.sh
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#copy-paste-the-content-in-startprojectsh-to-the-file" class="md-nav__link">
-    Copy &amp; Paste the content in startproject.sh to the file.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-to-your-project-folder" class="md-nav__link">
-    Go to your Project Folder
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-to-your-virtual-environment" class="md-nav__link">
-    Go to your Virtual-Environment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-to-your-django-project" class="md-nav__link">
-    Go to your Django Project
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -581,115 +486,7 @@
                   </a>
                 
                 
-                  <h1>Install</h1>
-                
-                <h2 id="create-a-file-named-startprojectsh"><strong>Create</strong> a file named <strong>startproject.sh</strong></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>touch startproject.sh
-<span class="linenos" data-linenos="2 "></span>nano startproject.sh
-</code></pre></div>
-<h2 id="copy-paste-the-content-in-startprojectsh-to-the-file"><strong>Copy &amp; Paste</strong> the content in <strong>startproject.sh</strong> to the file.</h2>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">run command</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sh startproject.sh -n project_name
-</code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">startproject.sh</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nv">ISVALID</span><span class="o">=</span><span class="nb">true</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="c1"># Command-Line &lt;Arguments&gt;</span>
-<span class="linenos" data-linenos=" 4 "></span><span class="k">while</span> <span class="nb">getopts</span> n: flag
-<span class="linenos" data-linenos=" 5 "></span><span class="k">do</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="k">case</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">flag</span><span class="si">}</span><span class="s2">&quot;</span> in
-<span class="linenos" data-linenos=" 7 "></span>        n<span class="o">)</span> <span class="nv">name</span><span class="o">=</span><span class="si">${</span><span class="nv">OPTARG</span><span class="si">}</span><span class="p">;;</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="k">esac</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">done</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="nv">$name</span><span class="s2">&quot;</span> <span class="o">]</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="k">then</span>
-<span class="linenos" data-linenos="13 "></span>        <span class="nv">ISVALID</span><span class="o">=</span><span class="nb">false</span>
-<span class="linenos" data-linenos="14 "></span>        <span class="nb">printf</span> <span class="s2">&quot;\nPlease enter a name for the project. \n\n&quot;</span>
-<span class="linenos" data-linenos="15 "></span>        <span class="nb">printf</span> <span class="s2">&quot;For example: \n&quot;</span>
-<span class="linenos" data-linenos="16 "></span>        <span class="nb">printf</span> <span class="s2">&quot;\tstartproject -n project_name\n&quot;</span>
-<span class="linenos" data-linenos="17 "></span><span class="k">fi</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>
-<span class="linenos" data-linenos="20 "></span><span class="c1"># Do something with the &lt;Arguments&gt;</span>
-<span class="linenos" data-linenos="21 "></span><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$ISVALID</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<span class="linenos" data-linenos="22 "></span>    <span class="c1"># Create Folder (Project-Root)</span>
-<span class="linenos" data-linenos="23 "></span>    mkdir -p <span class="nv">$name</span> 
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>    <span class="c1"># Change Directory</span>
-<span class="linenos" data-linenos="26 "></span>    <span class="nb">cd</span> <span class="nv">$name</span>
-<span class="linenos" data-linenos="27 "></span>
-<span class="linenos" data-linenos="28 "></span>    <span class="c1"># Project Folders</span>
-<span class="linenos" data-linenos="29 "></span>    mkdir -p docs scripts
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span>    <span class="c1"># Python Files</span>
-<span class="linenos" data-linenos="32 "></span>    touch .gitignore
-<span class="linenos" data-linenos="33 "></span>    touch LICENSE.txt
-<span class="linenos" data-linenos="34 "></span>    touch MANIFEST.in
-<span class="linenos" data-linenos="35 "></span>    touch README.md
-<span class="linenos" data-linenos="36 "></span>
-<span class="linenos" data-linenos="37 "></span>    <span class="c1"># Django</span>
-<span class="linenos" data-linenos="38 "></span>    python -m pipenv install Django
-<span class="linenos" data-linenos="39 "></span>
-<span class="linenos" data-linenos="40 "></span>    <span class="c1"># GraphDJ</span>
-<span class="linenos" data-linenos="41 "></span>    <span class="c1">#python -m pipenv install graphdj/dist/graphdj-0.0.1.tar.gz</span>
-<span class="linenos" data-linenos="42 "></span>
-<span class="linenos" data-linenos="43 "></span>    <span class="c1"># Start Project</span>
-<span class="linenos" data-linenos="44 "></span>    python -m pipenv run django-admin startproject <span class="nv">$name</span>
-<span class="linenos" data-linenos="45 "></span>
-<span class="linenos" data-linenos="46 "></span>    <span class="c1"># Change Directory (Project-Django)</span>
-<span class="linenos" data-linenos="47 "></span>    <span class="nb">cd</span> <span class="nv">$name</span>
-<span class="linenos" data-linenos="48 "></span>
-<span class="linenos" data-linenos="49 "></span>    <span class="c1"># Create Folders</span>
-<span class="linenos" data-linenos="50 "></span>    mkdir -p apps core setup configs
-<span class="linenos" data-linenos="51 "></span>    mkdir -p setup/roles
-<span class="linenos" data-linenos="52 "></span>    mkdir -p core/javascript
-<span class="linenos" data-linenos="53 "></span>
-<span class="linenos" data-linenos="54 "></span>    <span class="c1"># Create Files</span>
-<span class="linenos" data-linenos="55 "></span>    touch __init__.py
-<span class="linenos" data-linenos="56 "></span>    touch apps/__init__.py
-<span class="linenos" data-linenos="57 "></span>    touch core/__init__.py
-<span class="linenos" data-linenos="58 "></span>    touch setup/__init__.py
-<span class="linenos" data-linenos="59 "></span>    touch setup/roles/visitor.yaml
-<span class="linenos" data-linenos="60 "></span>    touch setup/plurals.py
-<span class="linenos" data-linenos="61 "></span>
-<span class="linenos" data-linenos="62 "></span>    <span class="c1"># Start App —&gt; **API**</span>
-<span class="linenos" data-linenos="63 "></span>    python -m pipenv run python manage.py startapp api
-<span class="linenos" data-linenos="64 "></span>
-<span class="linenos" data-linenos="65 "></span>    <span class="c1"># Move App</span>
-<span class="linenos" data-linenos="66 "></span>    mv api apps/api
-<span class="linenos" data-linenos="67 "></span>
-<span class="linenos" data-linenos="68 "></span>    <span class="c1"># Change Directory (Core-Setup)</span>
-<span class="linenos" data-linenos="69 "></span>    <span class="nb">cd</span> <span class="nv">$name</span>
-<span class="linenos" data-linenos="70 "></span>
-<span class="linenos" data-linenos="71 "></span>    <span class="c1"># Make Settings Directory</span>
-<span class="linenos" data-linenos="72 "></span>    mkdir -p settings
-<span class="linenos" data-linenos="73 "></span>    mv settings.py settings/base.py
-<span class="linenos" data-linenos="74 "></span>    <span class="nb">cd</span> settings
-<span class="linenos" data-linenos="75 "></span>    touch __init__.py
-<span class="linenos" data-linenos="76 "></span>    <span class="nb">echo</span> <span class="s2">&quot;from .development import *&quot;</span> &gt; __init__.py
-<span class="linenos" data-linenos="77 "></span>    touch common.py
-<span class="linenos" data-linenos="78 "></span>    touch development.py
-<span class="linenos" data-linenos="79 "></span>    <span class="nb">echo</span> <span class="s2">&quot;from .base import *&quot;</span> &gt; development.py
-<span class="linenos" data-linenos="80 "></span>    touch i18n.py
-<span class="linenos" data-linenos="81 "></span>    touch production.py
-<span class="linenos" data-linenos="82 "></span>    <span class="nb">echo</span> <span class="s2">&quot;from .base import *&quot;</span> &gt; production.py
-<span class="linenos" data-linenos="83 "></span>    touch test.py
-<span class="linenos" data-linenos="84 "></span>
-<span class="linenos" data-linenos="85 "></span><span class="k">fi</span>
-</code></pre></div>
-</div>
-</div>
-<h2 id="go-to-your-project-folder">Go to your <strong>Project Folder</strong></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">cd</span> project_name
-</code></pre></div>
-<h2 id="go-to-your-virtual-environment">Go to your <strong>Virtual-Environment</strong></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv shell
-</code></pre></div>
-<h2 id="go-to-your-django-project">Go to your <strong>Django Project</strong></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">cd</span> project_name
-</code></pre></div>
+                <h1 id="do-install">Do install</h1>
                 
               
               
