@@ -1,2 +1,2 @@
-from . import pk1
-from . import pk2
+from .core import schema
+from .middleware import DisableIntrospect

@@ -1,0 +1,47 @@
+site_name: GraphDJ
+#site_url : https://example.com/
+repo_url: https://github.com/hlop3z/graphdj
+copyright: Copyright © Hlop3z
+
+theme:
+  name: material
+  locale: en
+  features:
+    - navigation.tabs  
+  icon:
+    logo: material/toggle-switch-off-outline
+  palette:
+    primary: light blue
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - attr_list
+  - pymdownx.tabbed
+
+nav:
+    - Getting Started:
+      - Introduction: index.md
+
+    - Tutorial:
+      - Install: tutorial/install.md
+      - Configs: tutorial/configs.md
+      - User : tutorial/user.md
+      - Models : tutorial/models.md
+
+    - Cheat Sheet:
+      - Commands: commands.md
+      - Pipenv: pipenv.md
+      - Client: client.md
+
+plugins:
+  #- mike
+  - search:
+      separator: '[\s\-\.]+'
+
+extra:
+  version: 1.0
