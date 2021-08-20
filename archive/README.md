@@ -1,1 +1,1 @@
-# Move the <releases> here.
+# Move the **releases** here.

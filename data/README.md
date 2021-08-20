@@ -1,1 +1,1 @@
-# Any <data> for the project
+# Any **data** for the project
