@@ -2,6 +2,11 @@ Welcome to the **GraphDJ**.
 
 **GraphDJ** is a Django Module (aka: **App**) that’s written to **ease-development**. Which makes your **Django-Models** more powerful right **out-of-the-box**.
 
+## Install
+```sh
+python -m pip install graphdj
+```
+
 ## Dependencies
 * [Django](https://github.com/django/django)
 * [Graphene-Django](https://github.com/graphql-python/graphene-django)
@@ -12,7 +17,7 @@ Welcome to the **GraphDJ**.
 ## Goal
 > To simplify building the **C.R.U.D** system & automate the **Documentation** of the **API**.
 
-## **Setup/** — See [Configs](/tutorial/configs/) for example.
+## **Setup/** — See [Configs](/tutorial/configs.html) for example.
 * roles/ 
 > Use `yaml` **files** to create your **role(s)** configurations.
 * plurals.py
@@ -30,7 +35,7 @@ Welcome to the **GraphDJ**.
 
 <br/><br/>
 
-## **Settings/** — See [Configs](/tutorial/configs/) for example.
+## **Settings/** — See [Configs](/tutorial/configs.html) for example.
 * base.py — Django's default settings.
 * common.py — Used in (development, test & production)
 * development.py
