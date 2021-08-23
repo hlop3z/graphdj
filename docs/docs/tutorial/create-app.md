@@ -63,8 +63,3 @@ INSTALLED_APPS.extend(GRAPHDJ["APPS"])
 python -m pipenv run python manage.py makemigrations cookbook
 python -m pipenv run python manage.py migrate
 ```
-
-## Run Server — Development Mode
-```sh
-sh rundevops.sh
-```

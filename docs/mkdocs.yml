@@ -35,6 +35,8 @@ nav:
     - Tutorial:
       - Install: tutorial/install.md
       - Create App: tutorial/create-app.md
+      - Fixtures: tutorial/cookbook-fixtures.md
+      - GraphQL: tutorial/graphql.md
 
     - Cheat Sheet:
       - Commands: commands.md
