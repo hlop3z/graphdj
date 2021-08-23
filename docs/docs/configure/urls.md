@@ -1,3 +1,7 @@
+# **Urls.py**
+
+### Initiate your **Schema** here.
+
 ```py
 import graphdj
 from django.conf import settings

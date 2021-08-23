@@ -8,7 +8,7 @@ Welcome to **GraphDJ**.
 
 ## Links
 
-* ### [PyPi](https://pypi.org/project/graphdj/0.1.1/)
+* ### [PyPi](https://pypi.org/project/graphdj)
 * ### [Github](https://github.com/hlop3z/graphdj)
 * ### [Read the Documents](https://hlop3z.github.io/graphdj/)
 

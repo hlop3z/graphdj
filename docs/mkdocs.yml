@@ -30,7 +30,7 @@ nav:
       - Settings: configure/settings.md
       - Users   : configure/users.md
       - Models  : configure/models.md
-      - URLs    : configure/urls.md
+      - URLs / Schema : configure/urls.md
 
     - Tutorial:
       - Install: tutorial/install.md
