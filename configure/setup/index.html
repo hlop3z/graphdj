@@ -1,0 +1,953 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://hlop3z.github.io/graphdj/configure/setup/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>Setup - GraphDJ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GraphDJ" class="md-header__button md-logo" aria-label="GraphDJ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c.78.01 1.52.48 1.81 1.25l5 11.95c.09.26.14.55.13.8a2.02 2.02 0 0 1-1.23 1.8L9.53 21.1c-.26.12-.53.15-.79.15A2 2 0 0 1 6.93 20L1.97 8.05c-.42-1.01.07-2.18 1.09-2.6l7.36-3.05c.25-.09.51-.15.77-.15m3.48 0h1.45a2 2 0 0 1 2 2v6.35l-3.45-8.35m5.46 1.54 1.34.57a1.99 1.99 0 0 1 1.09 2.6l-2.43 5.86V3.79m-8.94.43L3.8 7.29 8.77 19.3l7.4-3.06-4.98-12.02M8.65 8.54l3.23 2.41-.44 4.01-3.23-2.42.44-4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GraphDJ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/hlop3z/graphdj/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link md-tabs__link--active">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorial/install/" class="md-tabs__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commands/" class="md-tabs__link">
+        Cheat Sheet
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GraphDJ" class="md-nav__button md-logo" aria-label="GraphDJ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c.78.01 1.52.48 1.81 1.25l5 11.95c.09.26.14.55.13.8a2.02 2.02 0 0 1-1.23 1.8L9.53 21.1c-.26.12-.53.15-.79.15A2 2 0 0 1 6.93 20L1.97 8.05c-.42-1.01.07-2.18 1.09-2.6l7.36-3.05c.25-.09.51-.15.77-.15m3.48 0h1.45a2 2 0 0 1 2 2v6.35l-3.45-8.35m5.46 1.54 1.34.57a1.99 1.99 0 0 1 1.09 2.6l-2.43 5.86V3.79m-8.94.43L3.8 7.29 8.77 19.3l7.4-3.06-4.98-12.02M8.65 8.54l3.23 2.41-.44 4.01-3.23-2.42.44-4z"/></svg>
+
+    </a>
+    GraphDJ
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/hlop3z/graphdj/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Setup
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roles-plural-words" class="md-nav__link">
+    Roles &amp; Plural words.
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles &amp; Plural words.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-update" class="md-nav__link">
+    Create &amp; Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read" class="md-nav__link">
+    Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#but-why" class="md-nav__link">
+    But . . . Why?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    Roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roleyaml" class="md-nav__link">
+    Role.yaml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pluralspy" class="md-nav__link">
+    Plurals.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in" class="md-nav__link">
+    Built-in
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        Settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        Users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../urls/" class="md-nav__link">
+        URLs / Schema
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/install/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/create-app/" class="md-nav__link">
+        Create App
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/models/" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Cheat Sheet
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cheat Sheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Cheat Sheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipenv/" class="md-nav__link">
+        Pipenv
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roles-plural-words" class="md-nav__link">
+    Roles &amp; Plural words.
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles &amp; Plural words.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-update" class="md-nav__link">
+    Create &amp; Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read" class="md-nav__link">
+    Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#but-why" class="md-nav__link">
+    But . . . Why?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    Roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roleyaml" class="md-nav__link">
+    Role.yaml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pluralspy" class="md-nav__link">
+    Plurals.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in" class="md-nav__link">
+    Built-in
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/hlop3z/graphdj/edit/master/docs/configure/setup.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="setup"><strong>Setup/</strong></h1>
+<h2 id="roles-plural-words"><strong>Roles</strong> &amp; <strong>Plural</strong> words.</h2>
+<ul>
+<li>roles/ <blockquote>
+<p>Use <code>yaml</code> <strong>files</strong> to create your <strong>role(s)</strong> configurations.</p>
+</blockquote>
+</li>
+<li>plurals.py<blockquote>
+<p>Configure <code>NOUNS = {}</code> to pluralize manually. For example: <code>{ "man" : "men" }</code> meaning <code>{ "singular" : "plural" }</code></p>
+</blockquote>
+</li>
+</ul>
+<p>In the <strong>example below</strong> you will see that for the <strong>create</strong> and <strong>update</strong> we use the singular verb.
+And for <strong>read</strong> we use the plural version of the word.</p>
+<h3 id="create-update"><strong>Create</strong> &amp; <strong>Update</strong></h3>
+<blockquote>
+<p>Use the "<strong>singular</strong>" verb as the <strong>field-name</strong>.</p>
+</blockquote>
+<h3 id="read"><strong>Read</strong></h3>
+<blockquote>
+<p>Use the "<strong>plural</strong>" verb as the <strong>field-name</strong>.</p>
+</blockquote>
+<p><br /></p>
+<h3 id="but-why">But . . . <strong>Why?</strong></h3>
+<p>In the <strong>example below</strong> we have 2—Models (<strong>Category &amp; Ingredient</strong>). <br />
+When we want to call the <strong>ingredients</strong> from our <strong>category</strong> model we are calling for any <strong>X—amount</strong> of ingredients belonging to the selected category. <br />
+Therefore, is easier to keep consistency if we make things singular and plural from the get-go.
+You either want a <strong>singular-object</strong> or a <strong>list-of-objects</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">class</span> <span class="nc">Ingredient</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="n">category</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="n">Category</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;ingredients&quot;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="p">)</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">class</span> <span class="nc">Recipe</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="n">ingredient</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="n">Ingredient</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;recipes&quot;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="p">)</span>
+</code></pre></div>
+<p><br /></p>
+<h2 id="roles"><strong>Roles</strong></h2>
+<blockquote>
+<ul>
+<li>Columns:  <code>[field_1, field_2, field_3: app.model]</code></li>
+<li>Related: <code>[field_3 : app.model]</code></li>
+</ul>
+</blockquote>
+<h2 id="examples"><strong>Examples</strong></h2>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">setup/roles/example.yaml</label><div class="tabbed-content">
+<h3 id="roleyaml">Role.yaml</h3>
+<blockquote>
+<p>Role: <strong>visitor</strong></p>
+<p>App: <strong>cookbook</strong></p>
+<p>Models: <strong>category, ingredient &amp; recipe</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># Role</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">visitor</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="c1"># App</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">cookbook</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="c1"># Model-1</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nt">category</span><span class="p">:</span> 
+<span class="linenos" data-linenos=" 9 "></span>            <span class="nt">create </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="10 "></span>            <span class="nt">update </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="nt">read   </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">,</span> <span class="nv">ingredients</span><span class="p p-Indicator">:</span> <span class="nv">cookbook.ingredient</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="nt">delete </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">del</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>        <span class="c1"># Model-2</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="nt">ingredient</span><span class="p">:</span> 
+<span class="linenos" data-linenos="16 "></span>            <span class="nt">create </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">,</span> <span class="nv">category</span><span class="p p-Indicator">:</span> <span class="nv">cookbook.category</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="nt">update </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">,</span> <span class="nv">category</span><span class="p p-Indicator">:</span> <span class="nv">cookbook.category</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="18 "></span>            <span class="nt">read   </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">,</span> <span class="nv">recipes</span><span class="p p-Indicator">:</span> <span class="nv">cookbook.recipe</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="19 "></span>            <span class="nt">delete </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">del</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span>        <span class="c1"># Model-3</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="nt">recipe</span><span class="p">:</span> 
+<span class="linenos" data-linenos="23 "></span>            <span class="nt">create </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="24 "></span>            <span class="nt">update </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="25 "></span>            <span class="nt">read   </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span> <span class="nv">name</span><span class="p p-Indicator">]</span>
+<span class="linenos" data-linenos="26 "></span>            <span class="nt">delete </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">del</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">setup/plurals.py</label><div class="tabbed-content">
+<h3 id="pluralspy">Plurals.py</h3>
+<blockquote>
+<p>It also uses <strong>regex</strong> to replace patterns based on <strong>english pluralization rules</strong> but in case something is misspelled you can fix it manually.</p>
+<p>For example: <strong>category —&gt; categories</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">NOUNS</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="s2">&quot;person&quot;</span><span class="p">:</span> <span class="s2">&quot;people&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="s2">&quot;man&quot;</span>   <span class="p">:</span> <span class="s2">&quot;men&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="s2">&quot;woman&quot;</span> <span class="p">:</span> <span class="s2">&quot;women&quot;</span>
+<span class="linenos" data-linenos="5 "></span><span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">(Built-in) plurals</label><div class="tabbed-content">
+<h3 id="built-in">Built-in</h3>
+<blockquote>
+<p>It also uses <strong>regex</strong> to replace patterns based on <strong>english pluralization rules</strong> but in case something is misspelled you can fix it manually.</p>
+<p>For example: <strong>category —&gt; categories</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">NOUNS</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="s2">&quot;aircraft&quot;</span>  <span class="p">:</span> <span class="s2">&quot;aircraft&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="s2">&quot;alumna&quot;</span>    <span class="p">:</span> <span class="s2">&quot;alumnae&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="s2">&quot;analysis&quot;</span>  <span class="p">:</span> <span class="s2">&quot;analyses&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="s2">&quot;apex&quot;</span>      <span class="p">:</span> <span class="s2">&quot;apices&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="s2">&quot;bison&quot;</span>     <span class="p">:</span> <span class="s2">&quot;bison&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="s2">&quot;cactus&quot;</span>    <span class="p">:</span> <span class="s2">&quot;cacti&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="s2">&quot;child&quot;</span>     <span class="p">:</span> <span class="s2">&quot;children&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="s2">&quot;codex&quot;</span>     <span class="p">:</span> <span class="s2">&quot;codices&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="s2">&quot;crisis&quot;</span>    <span class="p">:</span> <span class="s2">&quot;crises&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="s2">&quot;criterion&quot;</span> <span class="p">:</span> <span class="s2">&quot;criteria&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="s2">&quot;curriculum&quot;</span><span class="p">:</span> <span class="s2">&quot;curricula&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="s2">&quot;datum&quot;</span>     <span class="p">:</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="s2">&quot;diagnosis&quot;</span> <span class="p">:</span> <span class="s2">&quot;diagnoses&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="s2">&quot;ellipsis&quot;</span>  <span class="p">:</span> <span class="s2">&quot;ellipses&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="s2">&quot;erratum&quot;</span>   <span class="p">:</span> <span class="s2">&quot;errata&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="s2">&quot;fish&quot;</span>      <span class="p">:</span> <span class="s2">&quot;fish&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="s2">&quot;focus&quot;</span>     <span class="p">:</span> <span class="s2">&quot;foci&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="s2">&quot;foot&quot;</span>      <span class="p">:</span> <span class="s2">&quot;feet&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="s2">&quot;genus&quot;</span>     <span class="p">:</span> <span class="s2">&quot;genera&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="s2">&quot;goose&quot;</span>     <span class="p">:</span> <span class="s2">&quot;geese&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="s2">&quot;index&quot;</span>     <span class="p">:</span> <span class="s2">&quot;indices&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="s2">&quot;larva&quot;</span>     <span class="p">:</span> <span class="s2">&quot;larvae&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="s2">&quot;louse&quot;</span>     <span class="p">:</span> <span class="s2">&quot;lice&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="s2">&quot;man&quot;</span>       <span class="p">:</span> <span class="s2">&quot;men&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="s2">&quot;means&quot;</span>     <span class="p">:</span> <span class="s2">&quot;means&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="27 "></span>    <span class="s2">&quot;mouse&quot;</span>     <span class="p">:</span> <span class="s2">&quot;mice&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="28 "></span>    <span class="s2">&quot;oasis&quot;</span>     <span class="p">:</span> <span class="s2">&quot;oases&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="29 "></span>    <span class="s2">&quot;ox&quot;</span>        <span class="p">:</span> <span class="s2">&quot;oxen&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="30 "></span>    <span class="s2">&quot;person&quot;</span>    <span class="p">:</span> <span class="s2">&quot;people&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="s2">&quot;quiz&quot;</span>      <span class="p">:</span> <span class="s2">&quot;quizzes&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="32 "></span>    <span class="s2">&quot;series&quot;</span>    <span class="p">:</span> <span class="s2">&quot;series&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="33 "></span>    <span class="s2">&quot;sheep&quot;</span>     <span class="p">:</span> <span class="s2">&quot;sheep&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="34 "></span>    <span class="s2">&quot;species&quot;</span>   <span class="p">:</span> <span class="s2">&quot;species&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="35 "></span>    <span class="s2">&quot;swine&quot;</span>     <span class="p">:</span> <span class="s2">&quot;swine&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="36 "></span>    <span class="s2">&quot;tooth&quot;</span>     <span class="p">:</span> <span class="s2">&quot;teeth&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="37 "></span>    <span class="s2">&quot;trout&quot;</span>     <span class="p">:</span> <span class="s2">&quot;trout&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="38 "></span>    <span class="s2">&quot;tuna&quot;</span>      <span class="p">:</span> <span class="s2">&quot;tuna&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="39 "></span>    <span class="s2">&quot;vita&quot;</span>      <span class="p">:</span> <span class="s2">&quot;vitae&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="40 "></span>    <span class="s2">&quot;woman&quot;</span>     <span class="p">:</span> <span class="s2">&quot;women&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="41 "></span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p><br /><br /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../settings/" class="md-footer__link md-footer__link--next" aria-label="Next: Settings" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Settings
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © Hlop3z
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": 1.0}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+    
+  </body>
+</html>
