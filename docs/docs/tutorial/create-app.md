@@ -17,14 +17,15 @@ python -m pipenv run python manage.py create-app cookbook
 ```py
 # apps/cookbook/models.py
 from django.db import models
+from graphdj.models import GraphqlBase
 
-class Category(models.Model):
+class Category(GraphqlBase):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
-class Ingredient(models.Model):
+class Ingredient(GraphqlBase):
     name = models.CharField(max_length=100)
     notes = models.TextField()
     category = models.ForeignKey(
@@ -34,7 +35,7 @@ class Ingredient(models.Model):
     def __str__(self):
         return self.name
 
-class Recipe(models.Model):
+class Recipe(GraphqlBase):
     name = models.CharField(max_length=100)
     ingredient = models.ForeignKey(
         Ingredient, related_name="recipes", on_delete=models.CASCADE
