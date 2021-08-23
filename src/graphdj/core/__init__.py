@@ -47,23 +47,23 @@ def register_graphql(apps_list):
 def schema():
     """Build Graphene Schema"""
     params = dict()
-    the_docs = core_description(GRAPHDJ_APPS)
-    the_apps = register_graphql(GRAPHDJ_APPS)
-
-    class Query(*the_apps.Query, graphene.ObjectType):
-        """Query Wrapper"""
-
-        class Meta:
-            description = the_docs(QUERY_INFO)
-
-    class Mutation(*the_apps.Mutation, graphene.ObjectType):
-        """Mutation Wrapper"""
-
-        class Meta:
-            description = the_docs(MUTATION_INFO)
 
     if GRAPHDJ_APPS:
+        the_docs = core_description(GRAPHDJ_APPS)
+        the_apps = register_graphql(GRAPHDJ_APPS)
+
+        class Query(*the_apps.Query, graphene.ObjectType):
+            """Query Wrapper"""
+
+            class Meta:
+                description = the_docs(QUERY_INFO)
+
+        class Mutation(*the_apps.Mutation, graphene.ObjectType):
+            """Mutation Wrapper"""
+
+            class Meta:
+                description = the_docs(MUTATION_INFO)
+
         params["query"] = Query
         params["mutation"] = Mutation
-
     return graphene.Schema(**params, auto_camelcase=CAMELCASE)

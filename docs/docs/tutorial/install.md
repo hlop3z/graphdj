@@ -36,10 +36,10 @@ python -m pipenv install --dev
 mv .env_example.cfg .env.cfg
 ```
 
-## Create Logs Dir & Server-Log File.
+## Create **Logs Dir** & **Server-Log File**.
 ```sh
 mkdir -p logs
-touch server.jsonl
+touch logs/server.jsonl
 ```
 
 ## Then — Create a **Secret-Key**
