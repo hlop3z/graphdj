@@ -36,6 +36,12 @@ python -m pipenv install --dev
 mv .env_example.cfg .env.cfg
 ```
 
+## Create Logs Dir & Server-Log File.
+```sh
+mkdir -p logs
+touch server.jsonl
+```
+
 ## Then — Create a **Secret-Key**
 > After creating the **Secret-Key** add it inside the **.env.cfg** file in the **DJANGO_SECRET_KEY** variable.
 

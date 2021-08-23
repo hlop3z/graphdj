@@ -46,6 +46,7 @@ def register_graphql(apps_list):
 
 def schema():
     """Build Graphene Schema"""
+    params = dict()
     the_docs = core_description(GRAPHDJ_APPS)
     the_apps = register_graphql(GRAPHDJ_APPS)
 
@@ -61,4 +62,8 @@ def schema():
         class Meta:
             description = the_docs(MUTATION_INFO)
 
-    return graphene.Schema(query=Query, mutation=Mutation, auto_camelcase=CAMELCASE)
+    if GRAPHDJ_APPS:
+        params["query"] = Query
+        params["mutation"] = Mutation
+
+    return graphene.Schema(**params, auto_camelcase=CAMELCASE)
