@@ -1,4 +1,4 @@
-Welcome to the **GraphDJ**.
+Welcome to **GraphDJ**.
 
 **GraphDJ** is a Django Module (aka: **App**) that’s written to **ease-development**. Which makes your **Django-Models** more powerful right **out-of-the-box**.
 
@@ -17,28 +17,20 @@ python -m pip install graphdj
 ## Goal
 > To simplify building the **C.R.U.D** system & automate the **Documentation** of the **API**.
 
-## **Setup/** — See [Configs](/tutorial/configs.html) for example.
-* roles/ 
-> Use `yaml` **files** to create your **role(s)** configurations.
-* plurals.py
-> Configure `NOUNS = {}` to pluralize manually. For example: `{ "man" : "men" }` meaning `{ "singular" : "plural" }`
+## Features
+* Role Based Access Control (**RBAC**).
+* Model's Create, Read, Update & Delete (**CRUD**) integrated functions yet customizables.
+* Transform Roles & Models into **JavaScript** files.
+* Auto-generated **documentation** from the apps and their models.
+* **Pluralization** of the model's name.
+> **Example:** Person —> People
 
-## **Roles**
-* Columns:  `[field_1, field_2, field_3: app.model]`
-* Related: `[field_3 : app.model]`
+## Important **paths** to **remember**.
+* project_name/setup/roles/**any-custom-role-belongs-here.yaml**
+* project_name/setup/**plurals.py**
+* project_name/project_name/**urls.py**
+* project_name/project_name/**settings.py**
+> In the **Tutorial** this file is called **common.py** <br />
+> project_name/project_name/settings/**common.py**
 
-### **Create** & **Update**
-> Use the "**singular**" verb as the **field-name**.
-
-### **Read**
-> Use the "**plural**" verb as the **field-name**.
-
-<br/><br/>
-
-## **Settings/** — See [Configs](/tutorial/configs.html) for example.
-* base.py — Django's default settings.
-* common.py — Used in (development, test & production)
-* development.py
-* i18n.py
-* production.py
-* test.py
+<br /><br />

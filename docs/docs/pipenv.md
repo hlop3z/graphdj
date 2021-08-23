@@ -1,3 +1,13 @@
+## **Shell** 
+```sh
+python -m pipenv shell
+```
+
+## **Run** 
+```sh
+python -m pipenv run {command}
+```
+
 ## Install to **Core** 
 ```sh
 python -m pipenv install {package_or_module_name}

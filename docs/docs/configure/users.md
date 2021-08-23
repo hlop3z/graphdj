@@ -1,4 +1,4 @@
-## Add to **apps/api/models.py**
+## Add to **apps/users/models.py**
 ```py
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
@@ -29,6 +29,6 @@ class User(AbstractUser):
 
 ## Run Migrations
 ```sh
-python manage.py makemigrations api
+python manage.py makemigrations users
 python manage.py migrate
 ```

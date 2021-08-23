@@ -1,5 +1,5 @@
 site_name: GraphDJ
-#site_url : https://example.com/
+site_url : https://hlop3z.github.io/graphdj
 repo_url: https://github.com/hlop3z/graphdj
 copyright: Copyright © Hlop3z
 
@@ -9,7 +9,7 @@ theme:
   features:
     - navigation.tabs  
   icon:
-    logo: material/toggle-switch-off-outline
+    logo: material/cards-playing-outline
   palette:
     primary: light blue
 
@@ -26,11 +26,15 @@ markdown_extensions:
 nav:
     - Getting Started:
       - Introduction: index.md
+      - Setup   : configure/setup.md
+      - Settings: configure/settings.md
+      - Users   : configure/users.md
+      - Models  : configure/models.md
+      - URLs    : configure/urls.md
 
     - Tutorial:
       - Install: tutorial/install.md
-      - Configs: tutorial/configs.md
-      - User : tutorial/user.md
+      - Create App: tutorial/create-app.md
       - Models : tutorial/models.md
 
     - Cheat Sheet:
