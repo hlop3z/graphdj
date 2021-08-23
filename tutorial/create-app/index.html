@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cheat-sheet-version" class="md-skip">
+        <a href="#create" class="md-skip">
           Skip to content
         </a>
       
@@ -430,8 +430,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cheat-sheet-version" class="md-nav__link">
-    Cheat Sheet Version.
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-in-settingscommonpy-under-apps" class="md-nav__link">
+    Add in settings/common.py under "APPS"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-migrations" class="md-nav__link">
+    Run Migrations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-server-development-mode" class="md-nav__link">
+    Run Server — Development Mode
   </a>
   
 </li>
@@ -440,18 +468,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../models/" class="md-nav__link">
-        Models
-      </a>
     </li>
   
 
@@ -552,8 +568,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cheat-sheet-version" class="md-nav__link">
-    Cheat Sheet Version.
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-in-settingscommonpy-under-apps" class="md-nav__link">
+    Add in settings/common.py under "APPS"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-migrations" class="md-nav__link">
+    Run Migrations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-server-development-mode" class="md-nav__link">
+    Run Server — Development Mode
   </a>
   
 </li>
@@ -582,8 +626,56 @@
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py create-app <span class="o">{</span>app_name<span class="o">}</span>
 </code></pre></div>
-<h3 id="cheat-sheet-version">Cheat Sheet Version.</h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py create-app 
+<p><br /></p>
+<p>The following example is a modified copy from <a href="https://docs.graphene-python.org/">Graphene Django</a></p>
+<h2 id="create">Create</h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py create-app cookbook
+</code></pre></div>
+<h2 id="models">Models</h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># apps/cookbook/models.py</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="k">class</span> <span class="nc">Ingredient</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="n">notes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="n">category</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="n">Category</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;ingredients&quot;</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="p">)</span>
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="18 "></span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="k">class</span> <span class="nc">Recipe</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="n">ingredient</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="n">Ingredient</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;recipes&quot;</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="p">)</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="27 "></span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+</code></pre></div>
+<h2 id="add-in-settingscommonpy-under-apps">Add in <strong>settings/common.py</strong> under "<strong>APPS</strong>"</h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">GRAPHDJ</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="c1"># ...</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="s2">&quot;APPS&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos" data-linenos="4 "></span>        <span class="s2">&quot;cookbook&quot;</span><span class="p">,</span>
+<span class="linenos" data-linenos="5 "></span>        <span class="c1"># ...</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="p">],</span>
+<span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="8 "></span><span class="n">INSTALLED_APPS</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">GRAPHDJ</span><span class="p">[</span><span class="s2">&quot;APPS&quot;</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="run-migrations">Run Migrations</h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py makemigrations cookbook
+<span class="linenos" data-linenos="2 "></span>python -m pipenv run python manage.py migrate
+</code></pre></div>
+<h2 id="run-server-development-mode">Run Server — Development Mode</h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sh rundevops.sh
 </code></pre></div>
                 
               
@@ -620,13 +712,13 @@
       
       
         
-        <a href="../models/" class="md-footer__link md-footer__link--next" aria-label="Next: Models" rel="next">
+        <a href="../../commands/" class="md-footer__link md-footer__link--next" aria-label="Next: Commands" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Models
+              Commands
             </div>
           </div>
           <div class="md-footer__button md-icon">
