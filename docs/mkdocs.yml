@@ -35,7 +35,6 @@ nav:
     - Tutorial:
       - Install: tutorial/install.md
       - Create App: tutorial/create-app.md
-      - Models : tutorial/models.md
 
     - Cheat Sheet:
       - Commands: commands.md

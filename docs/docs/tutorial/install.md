@@ -55,8 +55,3 @@ sh scripts/keygen.sh
 python -m pipenv run python manage.py makemigrations users
 python -m pipenv run python manage.py migrate
 ```
-
-## Run Server — Development Mode
-```sh
-sh rundevops.sh
-```
