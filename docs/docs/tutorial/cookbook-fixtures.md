@@ -1,14 +1,17 @@
-Copy **data.JSON** to the file **apps/cookbook/fixtures/cookbook.json**
+Copy and Paste the data in **fixtures.JSON** to the file **apps/cookbook/fixtures/cookbook.json**
+
+```sh
+mkdir apps/cookbook/fixtures
+touch apps/cookbook/fixtures/cookbook.json
+```
 
 === "Run Command"
+    ```sh
+    python -m pipenv run python manage.py loaddata cookbook
+    ```
 
-  ```sh
-  python -m pipenv run python manage.py loaddata cookbook
-  ```
-
-=== "data.JSON"
-
-    ```py
+=== "fixtures.JSON"
+    ```json 
     [
         {
           "model": "cookbook.category",
@@ -85,4 +88,4 @@ Copy **data.JSON** to the file **apps/cookbook/fixtures/cookbook.json**
           }
         }
     ]
-    ```
+    ```  

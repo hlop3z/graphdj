@@ -15,7 +15,7 @@ from django.utils import timezone
 from graphql import GraphQLError
 from graphql_relay import from_global_id
 
-from .__base__ import LOGGING, ROLES, ROLES_ACCESS
+from .__base__ import GUEST_NAME, LOGGING, ROLES, ROLES_ACCESS
 
 # Logging & Error
 logging.config.fileConfig("logging.ini", disable_existing_loggers=False)
@@ -28,7 +28,7 @@ get_id = lambda uid: from_global_id(uid)[1]
 
 def check_request(user, requested) -> bool:
     """
-    Check if user is allowed to the request.
+    Check if user is allowed to do request.
     """
     if isinstance(requested, dict):
         requested = list(requested.keys())
@@ -44,6 +44,7 @@ def check_request(user, requested) -> bool:
         logging.info(
             {
                 "meta": {
+                    "type": "request",
                     "crud": user.crud,
                     "model": user.model,
                     "datetime": timezone.now(),
@@ -67,11 +68,11 @@ def check_request(user, requested) -> bool:
 
 def get_role(user):
     """
-    Get the user's role.
+    Get the user's role or default(GUEST_NAME)
     """
     if user.is_anonymous:
         return_value = types.SimpleNamespace(
-            role=None, role_id=False, user=user, relay_id=get_id
+            role=GUEST_NAME, role_id=0, user=user, relay_id=get_id
         )
     else:
         return_value = types.SimpleNamespace(
@@ -139,7 +140,22 @@ def get_access(user, perm):
                 user.access = active_access[perm]
                 user.access_extra = None
         except:
-            print(f"[ACCESS-ERROR] user : { user.user }-{ user.role }")
+            if LOGGING:
+                # Log Request
+                logging.info(
+                    {
+                        "meta": {
+                            "type": "access-error",
+                            "datetime": timezone.now(),
+                        },
+                        "message": {
+                            "requested": perm,
+                            "user_id": user.user.id,
+                            "role": user.role,
+                            "role_id": user.role_id,
+                        },
+                    }
+                )
             raise GraphQLError(ACCESS_ERROR_MESSAGE)
     else:
         user.access = []

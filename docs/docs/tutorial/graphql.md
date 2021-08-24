@@ -1,7 +1,15 @@
+## Create **Super-User**
+```sh
+python -m pipenv run python manage.py createsuperuser \
+--username admin \
+--email admin@example.com
+```
+
 ## **Run Server** — Development Mode
 ```sh
 sh rundevops.sh
 ```
+## <a href="http://127.0.0.1:8000/admin/" target="_blank">Go to Admin-Login</a>
 
 ## <a href="http://127.0.0.1:8000/graphql/" target="_blank">Go to the Server!</a>
 

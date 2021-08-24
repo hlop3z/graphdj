@@ -58,9 +58,9 @@ GRAPHDJ = {
     "QUERIES_INFO": "Awesome Queries!",
     "MUTATIONS_INFO": "Awesome Mutations!",
     "ROLES": {
-        0: "admin",
-        1: "customer",
-        2: "employee",
+        0: "visitor",
+        1: "admin",
+        2: "customer",
         # etc . . . 
     },
     "APPS": [

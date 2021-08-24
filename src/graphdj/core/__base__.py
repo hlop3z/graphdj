@@ -15,6 +15,7 @@ from .pluralize import pluralize
 if not settings.GRAPHDJ:
     raise ValueError("Please configure GraphDJ.")
 
+GUEST_NAME = settings.GRAPHDJ.get("GUEST_NAME") or "visitor"
 ROLES = settings.GRAPHDJ.get("ROLES") or {}
 ROLES_ACCESS = settings.GRAPHDJ.get("ROLES_ACCESS") or {}
 GRAPHDJ_APPS = settings.GRAPHDJ.get("APPS") or []
