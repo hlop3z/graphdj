@@ -33,19 +33,18 @@ def create_models_js(apps_list=GRAPHDJ_APPS):
                 if not field.null and not field.name == "id"
             ]
             javascript = {
-                "required": fields_required,
-                "fields": fields,
-                "create": form,
-                "update": form,
+                "form": form,
+                "instance": form,
                 "objects": {},
                 "meta": {
-                    "uri": uri,
+                    "required": fields_required,
+                    "fields": fields,
                     "app": conf.name,
-                    "instance": conf.model.one,
+                    "model": conf.model.one,
                     "objects": conf.model.many,
                 },
             }
-            the_project[javascript["meta"]["uri"]] = javascript
+            the_project[uri] = javascript
     with open(FILE_OUT_JS, "w") as file:
         json_data = json.dumps(list(the_project.values()), sort_keys=True, indent=4)
         file.write(f"export default {json_data}")
