@@ -2,57 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://hlop3z.github.io/graphdj/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/client/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/commands/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/pipenv/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/configure/models/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/configure/settings/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/configure/setup/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/configure/urls/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/configure/users/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hlop3z.github.io/graphdj/tutorial/cookbook-fixtures/</loc>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/tutorial/create-app/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hlop3z.github.io/graphdj/tutorial/graphql/</loc>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hlop3z.github.io/graphdj/tutorial/install/</loc>
-         <lastmod>2021-08-23</lastmod>
+         <lastmod>2021-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

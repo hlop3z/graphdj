@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://hlop3z.github.io/graphdj/tutorial/create-app/">
+        <link rel="canonical" href="https://hlop3z.github.io/graphdj/tutorial/graphql/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
-        <title>Create App - GraphDJ</title>
+        <title>GraphQL - GraphDJ</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create" class="md-skip">
+        <a href="#create-super-user" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create App
+              GraphQL
             
           </span>
         </div>
@@ -399,68 +399,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Create App
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../create-app/" class="md-nav__link">
         Create App
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create" class="md-nav__link">
-    Create
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#models" class="md-nav__link">
-    Models
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-in-settingscommonpy-under-apps" class="md-nav__link">
-    Add in settings/common.py under "APPS"
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-migrations" class="md-nav__link">
-    Run Migrations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -480,11 +423,68 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../graphql/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GraphQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         GraphQL
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-super-user" class="md-nav__link">
+    Create Super-User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-server-development-mode" class="md-nav__link">
+    Run Server — Development Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-to-admin-login" class="md-nav__link">
+    Go to Admin-Login
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-to-the-server" class="md-nav__link">
+    Go to the Server!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -585,29 +585,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create" class="md-nav__link">
-    Create
+  <a href="#create-super-user" class="md-nav__link">
+    Create Super-User
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#models" class="md-nav__link">
-    Models
+  <a href="#run-server-development-mode" class="md-nav__link">
+    Run Server — Development Mode
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-in-settingscommonpy-under-apps" class="md-nav__link">
-    Add in settings/common.py under "APPS"
+  <a href="#go-to-admin-login" class="md-nav__link">
+    Go to Admin-Login
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-migrations" class="md-nav__link">
-    Run Migrations
+  <a href="#go-to-the-server" class="md-nav__link">
+    Go to the Server!
   </a>
   
 </li>
@@ -624,66 +624,106 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/hlop3z/graphdj/edit/master/docs/tutorial/create-app.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/hlop3z/graphdj/edit/master/docs/tutorial/graphql.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Create App</h1>
+                  <h1>GraphQL</h1>
                 
-                <blockquote>
-<p>Where <strong>{app_name}</strong> is your app.</p>
+                <h2 id="create-super-user">Create <strong>Super-User</strong></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py createsuperuser <span class="se">\</span>
+<span class="linenos" data-linenos="2 "></span>--username admin <span class="se">\</span>
+<span class="linenos" data-linenos="3 "></span>--email admin@example.com
+</code></pre></div>
+<h2 id="run-server-development-mode"><strong>Run Server</strong> — Development Mode</h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sh rundevops.sh
+</code></pre></div>
+<h2 id="go-to-admin-login"><a href="http://127.0.0.1:8000/admin/" target="_blank">Go to Admin-Login</a></h2>
+<h2 id="go-to-the-server"><a href="http://127.0.0.1:8000/graphql/" target="_blank">Go to the Server!</a></h2>
+<blockquote>
+<p><strong>Copy &amp; Paste</strong> the code below.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py create-app <span class="o">{</span>app_name<span class="o">}</span>
-</code></pre></div>
-<p><br /></p>
-<p>The following example is a modified copy from <a href="https://docs.graphene-python.org/">Graphene Django</a></p>
-<h2 id="create">Create</h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py create-app cookbook
-</code></pre></div>
-<h2 id="models">Models</h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># apps/cookbook/models.py</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-<span class="linenos" data-linenos=" 3 "></span><span class="kn">from</span> <span class="nn">graphdj.models</span> <span class="kn">import</span> <span class="n">GraphqlBase</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">GraphqlBase</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 7 "></span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>query availableQueries {
+<span class="linenos" data-linenos=" 2 "></span>  __schema {
+<span class="linenos" data-linenos=" 3 "></span>    queryType {
+<span class="linenos" data-linenos=" 4 "></span>      fields {
+<span class="linenos" data-linenos=" 5 "></span>        name
+<span class="linenos" data-linenos=" 6 "></span>      }
+<span class="linenos" data-linenos=" 7 "></span>    }
+<span class="linenos" data-linenos=" 8 "></span>  }
+<span class="linenos" data-linenos=" 9 "></span>}
 <span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="k">class</span> <span class="nc">Ingredient</span><span class="p">(</span><span class="n">GraphqlBase</span><span class="p">):</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="linenos" data-linenos="13 "></span>    <span class="n">notes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="n">category</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
-<span class="linenos" data-linenos="15 "></span>        <span class="n">Category</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;ingredients&quot;</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="p">)</span>
-<span class="linenos" data-linenos="17 "></span>
-<span class="linenos" data-linenos="18 "></span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="19 "></span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+<span class="linenos" data-linenos="11 "></span>query availableMutations {
+<span class="linenos" data-linenos="12 "></span>  __schema {
+<span class="linenos" data-linenos="13 "></span>    mutationType {
+<span class="linenos" data-linenos="14 "></span>      fields {
+<span class="linenos" data-linenos="15 "></span>        name
+<span class="linenos" data-linenos="16 "></span>      }
+<span class="linenos" data-linenos="17 "></span>    }
+<span class="linenos" data-linenos="18 "></span>  }
+<span class="linenos" data-linenos="19 "></span>}
 <span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="k">class</span> <span class="nc">Recipe</span><span class="p">(</span><span class="n">GraphqlBase</span><span class="p">):</span>
-<span class="linenos" data-linenos="22 "></span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="linenos" data-linenos="23 "></span>    <span class="n">ingredient</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="n">Ingredient</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;recipes&quot;</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span>
-<span class="linenos" data-linenos="25 "></span>    <span class="p">)</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="28 "></span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-</code></pre></div>
-<h2 id="add-in-settingscommonpy-under-apps">Add in <strong>settings/common.py</strong> under "<strong>APPS</strong>"</h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">GRAPHDJ</span> <span class="o">=</span> <span class="p">{</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="c1"># ...</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="s2">&quot;APPS&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos" data-linenos="4 "></span>        <span class="s2">&quot;cookbook&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="5 "></span>        <span class="c1"># ...</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="p">],</span>
-<span class="linenos" data-linenos="7 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="8 "></span><span class="n">INSTALLED_APPS</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">GRAPHDJ</span><span class="p">[</span><span class="s2">&quot;APPS&quot;</span><span class="p">])</span>
-</code></pre></div>
-<h2 id="run-migrations">Run Migrations</h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python -m pipenv run python manage.py makemigrations cookbook
-<span class="linenos" data-linenos="2 "></span>python -m pipenv run python manage.py migrate
+<span class="linenos" data-linenos="21 "></span>mutation createCategory {
+<span class="linenos" data-linenos="22 "></span>  cookbookCategoryEditor(input: {name: &quot;hello&quot;}) {
+<span class="linenos" data-linenos="23 "></span>    category {
+<span class="linenos" data-linenos="24 "></span>      id
+<span class="linenos" data-linenos="25 "></span>      name
+<span class="linenos" data-linenos="26 "></span>    }
+<span class="linenos" data-linenos="27 "></span>  }
+<span class="linenos" data-linenos="28 "></span>}
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>mutation updateCategory {
+<span class="linenos" data-linenos="31 "></span>  cookbookCategoryEditor(input: {ids: &quot;a_relay_id(s)&quot;, name: &quot;proteins&quot;}) {
+<span class="linenos" data-linenos="32 "></span>    category {
+<span class="linenos" data-linenos="33 "></span>      id
+<span class="linenos" data-linenos="34 "></span>      name
+<span class="linenos" data-linenos="35 "></span>    }
+<span class="linenos" data-linenos="36 "></span>  }
+<span class="linenos" data-linenos="37 "></span>}
+<span class="linenos" data-linenos="38 "></span>
+<span class="linenos" data-linenos="39 "></span>mutation deleteCategory {
+<span class="linenos" data-linenos="40 "></span>  cookbookCategoryEditor(input: {ids: &quot;a_relay_id(s)&quot;, del: true}) {
+<span class="linenos" data-linenos="41 "></span>    category {
+<span class="linenos" data-linenos="42 "></span>      id
+<span class="linenos" data-linenos="43 "></span>      name
+<span class="linenos" data-linenos="44 "></span>    }
+<span class="linenos" data-linenos="45 "></span>  }
+<span class="linenos" data-linenos="46 "></span>}
+<span class="linenos" data-linenos="47 "></span>
+<span class="linenos" data-linenos="48 "></span>query cookbookCategory {
+<span class="linenos" data-linenos="49 "></span>  cookbookCategory(id: &quot;a_relay_id&quot;) {
+<span class="linenos" data-linenos="50 "></span>    id
+<span class="linenos" data-linenos="51 "></span>    name
+<span class="linenos" data-linenos="52 "></span>  }
+<span class="linenos" data-linenos="53 "></span>}
+<span class="linenos" data-linenos="54 "></span>
+<span class="linenos" data-linenos="55 "></span>query cookbookCategories {
+<span class="linenos" data-linenos="56 "></span>  cookbookCategories {
+<span class="linenos" data-linenos="57 "></span>    edges {
+<span class="linenos" data-linenos="58 "></span>      node {
+<span class="linenos" data-linenos="59 "></span>        id
+<span class="linenos" data-linenos="60 "></span>        name
+<span class="linenos" data-linenos="61 "></span>        ingredients {
+<span class="linenos" data-linenos="62 "></span>          edges {
+<span class="linenos" data-linenos="63 "></span>            node {
+<span class="linenos" data-linenos="64 "></span>              id
+<span class="linenos" data-linenos="65 "></span>              name
+<span class="linenos" data-linenos="66 "></span>              recipes {
+<span class="linenos" data-linenos="67 "></span>                edges {
+<span class="linenos" data-linenos="68 "></span>                  node {
+<span class="linenos" data-linenos="69 "></span>                    id
+<span class="linenos" data-linenos="70 "></span>                    name
+<span class="linenos" data-linenos="71 "></span>                  }
+<span class="linenos" data-linenos="72 "></span>                }
+<span class="linenos" data-linenos="73 "></span>              }
+<span class="linenos" data-linenos="74 "></span>            }
+<span class="linenos" data-linenos="75 "></span>          }
+<span class="linenos" data-linenos="76 "></span>        }
+<span class="linenos" data-linenos="77 "></span>      }
+<span class="linenos" data-linenos="78 "></span>    }
+<span class="linenos" data-linenos="79 "></span>  }
+<span class="linenos" data-linenos="80 "></span>}
 </code></pre></div>
                 
               
@@ -704,7 +744,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install" rel="prev">
+        <a href="../cookbook-fixtures/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fixtures" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -713,20 +753,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Install
+              Fixtures
             </div>
           </div>
         </a>
       
       
         
-        <a href="../cookbook-fixtures/" class="md-footer__link md-footer__link--next" aria-label="Next: Fixtures" rel="next">
+        <a href="../../commands/" class="md-footer__link md-footer__link--next" aria-label="Next: Commands" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Fixtures
+              Commands
             </div>
           </div>
           <div class="md-footer__button md-icon">
